@@ -1,0 +1,23 @@
+.cityBox {
+    width: 246px;
+    height: 88px;
+    border: 1px solid rgba(177, 139, 139, 0.322);
+    box-sizing: border-box;
+    box-shadow: 2px 2px 5px 2px grey;
+    border-radius: 5px;
+    float: left;
+    cursor: pointer;
+    margin: 10px 30px;
+}
+
+.cityBox img {
+    width: 100px;
+    height: 90px;
+    float:  left;
+}
+
+.cityBox h4 {
+    position: relative;
+    top: 16px;
+    left: 22px;
+}

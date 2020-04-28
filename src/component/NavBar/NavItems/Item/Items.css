@@ -1,0 +1,29 @@
+.Items {
+    margin: 0;
+    box-sizing: border-box;
+    display: flex;
+    height: 100%;
+    align-items: center;
+}
+
+.Items a {
+    color: white;
+    text-decoration: none;
+    height: 100%;
+    padding: 24px 10px;
+    border-bottom: 4px solid transparent;
+    box-sizing: border-box;
+    display: block;
+    color: rgb(76, 85, 87);
+    /* transition: background-color border-bottom color 1.5s;
+    transition: border-bottom 1.5s;
+    transition: color 1.5s; */
+}
+
+.Items a:hover {
+    border-bottom: 4px solid black;
+    color: black;
+    background-color: white;
+}
+
+  

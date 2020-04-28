@@ -1,0 +1,17 @@
+.NavItems {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    align-items: center;
+    font-weight: bold;
+    height: 100%;
+    vertical-align: middle;
+}
+
+@media (max-width: 479px) {
+    .NavItems {
+        display: none;
+    }
+}
+

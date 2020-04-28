@@ -1,0 +1,36 @@
+.Content {
+    margin: 10px 10px;
+    padding: 10px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: row;
+    border-top: 2px solid rgba(187, 152, 152, 0.575);
+}
+
+.Content h2{
+    margin: 10px 20px 10px;
+}
+
+.Content .cardContent {
+    width: 80%;
+}
+
+.Content .sidebarContent {
+    width: 20%;
+    border-left: 1px solid rgb(179, 130, 130);
+}
+
+@media (max-width: 479px) {
+    .Content {
+        flex-direction: column;
+    }
+
+    .Content .cardContent {
+        width: 100%;
+    }
+    
+    .Content .sidebarContent {
+        width: 100%;
+    }
+}
+

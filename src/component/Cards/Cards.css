@@ -1,0 +1,29 @@
+.Cards {
+    display: flex;
+    flex-direction: column;
+    margin: 20px;
+    padding: 15px;
+    cursor: pointer;
+    border-radius: 10px;
+    border: 2px solid rgba(212, 170, 170, 0.438);
+    box-shadow: 3px 3px 6px 4px #888888;
+}
+
+.Cards h1 {
+    font-family: inherit;
+    font-size: 24px;
+    margin: 20px 0;
+}
+
+.Cards p {
+    font-family: inherit;
+    font-size: 18px;
+    margin: 0;
+}
+
+.Cards img {
+    width: 100%;
+    height: 300px;
+    margin: 0;
+    padding: 0;
+}
