@@ -5,8 +5,7 @@
     box-sizing: border-box;
 }
 
-.Sidebar a {
-    text-decoration: none;
+.Sidebar h4 {
     color: black;
     font-family: inherit;
     font-size: 14px;
@@ -17,7 +16,11 @@
     border-bottom: 1px solid rgba(168, 131, 131, 0.479);
 }
 
-.Sidebar a:hover {
+.Sidebar a {
+    text-decoration: none;
+}
+
+.Sidebar h4:hover {
     color: #13aff0;
 }
 
