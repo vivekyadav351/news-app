@@ -12,15 +12,16 @@ const cityData = [
 
 const Location = (props) => {
 
-    const boxData = cityData.map(city => (
+    const boxData = cityData.map((city, i) => (
         <LocationNames
+                key={i}
                 city={city.name}
                 image={city.image}  />
     ));
 
     return (
         <div className="location">
-            <h2>Locations of our Co-working spaces</h2>
+            <h2>Our Locations</h2>
             {boxData}
         </div>
     )

@@ -8,7 +8,7 @@ class SideBar extends Component {
         posts: []
     }
     componentDidMount() {
-        axios.get('https://jsonplaceholder.typicode.com/posts')
+        axios.get('/posts')
             .then(response => {
                 const posts = response.data;
                 this.setState({posts: posts});

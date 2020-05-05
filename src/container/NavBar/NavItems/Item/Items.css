@@ -8,6 +8,7 @@
 
 .Items a {
     color: white;
+    font-size: 18px;
     text-decoration: none;
     height: 100%;
     padding: 24px 10px;
@@ -20,10 +21,25 @@
     transition: color 1.5s; */
 }
 
-.Items a:hover {
+.Items a:active,
+.Items a.active {
     border-bottom: 4px solid black;
     color: black;
     background-color: white;
 }
 
+.Items a:hover {
+    border-bottom: 4px solid black;
+    border-left: 1px solid rgba(161, 96, 96, 0.486);
+    border-right: 1px solid rgba(161, 96, 96, 0.486);
+    color: black;
+    background-color: white;
+    position: relative;
+    animation: mymove 2s infinite;
+}
+
+/* @keyframes mymove {
+    0%   {background: red; width: 0;}
+    100% {background: red; width: 100%;}
+} */
   

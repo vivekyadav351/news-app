@@ -11,7 +11,7 @@
 }
 
 .cityBox img {
-    width: 100px;
+    width: 110px;
     height: 90px;
     float:  left;
 }
@@ -20,4 +20,16 @@
     position: relative;
     top: 16px;
     left: 22px;
+}
+
+@media (max-width: 479px) {
+    .cityBox {
+        width: 300px;
+    }
+
+    .cityBox h4 {
+        top: 10px;
+        left: 40px;
+        font-size: 19px;
+    }
 }

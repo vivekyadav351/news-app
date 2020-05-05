@@ -17,3 +17,16 @@
     height: 100%;
 }
 
+.Navbar a {
+    color: rgb(112, 43, 43);
+    font-size: 24px;
+    cursor: pointer;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.Navbar a:hover {
+    color: rgb(72, 109, 209);
+}
+
+

@@ -1,11 +1,13 @@
 import React from 'react'
+import {NavLink} from 'react-router-dom'
+
 import './NavBar.css'
 import NavItems from './NavItems/NavItems'
 
 const NavBar = () => {
     return (
         <header className="Navbar">
-            <h3>Co-Working Universe</h3>
+            <NavLink to="/" exact>Co-Working Universe</NavLink>
             <nav>
                 <NavItems />
             </nav>

@@ -1,12 +1,22 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import { BrowserRouter } from 'react-router-dom'
 import './index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
+import axios from 'axios'
+
+axios.defaults.baseURL = 'https://jsonplaceholder.typicode.com';
+
+const app = (
+  <BrowserRouter>
+      <App />
+  </BrowserRouter>
+);
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    {app}
   </React.StrictMode>,
   document.getElementById('root')
 );
