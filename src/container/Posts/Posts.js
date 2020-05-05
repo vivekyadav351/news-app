@@ -12,8 +12,7 @@ class Posts extends Component {
     }
 
     componentDidMount() {
-          console.log(this.props);
-        
+          console.log(this.props); 
         axios.get('/posts')
             .then(response => {
                 const posts = response.data.slice(0, 10);
@@ -24,7 +23,11 @@ class Posts extends Component {
                     }
                 });
                 this.setState({posts: updatedPosts});
-                //console.log(response);
+                console.log(response);
+            })
+            .catch(error => {
+                console.log(error);
+                
             })
     }
 
@@ -40,6 +43,7 @@ class Posts extends Component {
                         title={post.title}
                         desc={post.body}
                         image={post.image}
+                        {...this.props}
                         clicked={() => this.postClickHandler(post.id)} />
                 </Link>
             )

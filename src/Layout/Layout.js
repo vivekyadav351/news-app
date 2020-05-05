@@ -8,7 +8,7 @@ import About from '../component/About/About'
 //import Location from '../container/Location/Location'
 //import Content from '../container/Content/Content'
 import Home from '../container/Home/Home'
-//import Articles from '../component/Articles/Articles'
+import Articles from '../component/Articles/Articles'
 import './Layout.css'
 
 
@@ -21,7 +21,8 @@ class Layout extends Component {
                     <Route path="/startup" exact component={Startup} />
                     <Route path="/cowork" exact component={Cowork} />
                     <Route path="/about" exact component={About} />
-                    {/* <Route path="/:id" exact component={Articles} /> */}
+                    <Route path="/:id" exact component={Articles} />
+                    <Route path="/" exact component={Home} />
                    <Home />
                 </Switch>
             </div>

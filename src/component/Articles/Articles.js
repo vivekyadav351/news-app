@@ -12,7 +12,7 @@ class Articles extends Component {
 
     componentDidMount () {
         console.log(this.props);
-        
+           
         if (this.props.id) {
             if (!this.state.loadedPost || (this.state.loadedPost && this.state.loadedPost.id !== this.props.id)) {
                 axios.get('/posts/' + this.props.id)
