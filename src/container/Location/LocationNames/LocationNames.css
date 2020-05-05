@@ -1,9 +1,9 @@
 .cityBox {
     width: 246px;
-    height: 88px;
-    border: 1px solid rgba(177, 139, 139, 0.322);
+    height: 91px;
+    border: 1px solid rgba(160, 122, 122, 0.322);
     box-sizing: border-box;
-    box-shadow: 2px 2px 5px 2px grey;
+    background-color: rgb(240, 237, 230);
     border-radius: 5px;
     float: left;
     cursor: pointer;
@@ -12,6 +12,7 @@
 
 .cityBox:hover {
     color: #456be9;
+    box-shadow: 2px 2px 5px 2px grey;
 }
 
 .cityBox img {
