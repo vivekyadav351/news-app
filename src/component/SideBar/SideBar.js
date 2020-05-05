@@ -1,5 +1,7 @@
 import React, {Component} from 'react'
 import axios from 'axios'
+import {Link} from 'react-router-dom'
+
 import Title from './Title/Title'
 import './SideBar.css'
 
@@ -16,9 +18,14 @@ class SideBar extends Component {
     }
     render() {
         const title = this.state.posts.slice(0, 5).map(post => {
-            return <Title
-                        key={post.id}
-                        title={post.title} />
+            return (
+                <Link to={"/" + post.id} key={post.id}>
+                    <Title
+                        title={post.title}
+                        clicked={() => this.postClickHandler(post.id)} />
+                </Link>
+                )
+                        
         });
          return (
             <div className="Sidebar">
