@@ -4,7 +4,7 @@ import {Link} from 'react-router-dom'
 import './Posts.css'
 
 import Cards from '../../component/Cards/Cards'
-import Articles from '../../component/Articles/Articles'
+//import Articles from '../../component/Articles/Articles'
 
 class Posts extends Component {
     state = {
@@ -12,7 +12,7 @@ class Posts extends Component {
     }
 
     componentDidMount() {
-          console.log(this.props); 
+          console.log(this.props);
         axios.get('/posts')
             .then(response => {
                 const posts = response.data.slice(0, 10);
@@ -23,11 +23,10 @@ class Posts extends Component {
                     }
                 });
                 this.setState({posts: updatedPosts});
-                console.log(response);
+                //console.log(response);
             })
             .catch(error => {
                 console.log(error);
-                
             })
     }
 
@@ -50,7 +49,7 @@ class Posts extends Component {
         });
         return (
             <div className="Posts">
-                <Articles id={this.state.selectedPostId} />
+                <h2>Funding News</h2>
                 {posts}
             </div>
         )

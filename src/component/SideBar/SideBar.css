@@ -8,7 +8,7 @@
 .Sidebar h4 {
     color: black;
     font-family: inherit;
-    font-size: 14px;
+    font-size: 16px;
     font-weight: 500;
     margin: 0;
     cursor: pointer;
@@ -28,4 +28,12 @@
     padding: 0px 0px 5px 0px;
     border-bottom: 4px solid blueviolet;
     margin: 0px 0px 10px 0px;
+}
+
+@media (max-width: 480px) {
+    .Sidebar h4 {
+        font-size: 17px;
+        padding-top: 10px;
+    }
+    
 }

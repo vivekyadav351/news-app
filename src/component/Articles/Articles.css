@@ -1,5 +1,8 @@
+.articlePage {
+    margin-top: 50px;
+}
+
 .articles {
-    margin-top: 70px;
     padding: 10px;
     font-family: inherit;
 }
@@ -29,4 +32,28 @@
 .articles p {
     font-size: 16px;
     line-height: 26px;
+}
+
+@media (max-width: 480px) {
+    .articles img {
+        height: 200px;
+    }
+
+    .articles p {
+        font-size: 19px;
+        line-height: 26px;
+        text-align: justify;
+    }
+
+    .articles .AuthDate p {
+        margin: 5px 10px;
+        font-size: 15px;
+    }
+
+    .articles h1 {
+        padding-bottom: 20px;
+        font-size: 26px;
+        
+    }
+
 }

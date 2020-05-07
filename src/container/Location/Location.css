@@ -1,7 +1,13 @@
 .location {
-    margin: 90px 0 0 20px;
+    margin: 90px 20px 0 20px;
+    padding-bottom: 20px;
+    border-bottom: 2px solid rgba(187, 152, 152, 0.575);
 }
 
 .location h2 {
     margin: 10px;
+}
+
+.location .city {
+    width: 100%;
 }

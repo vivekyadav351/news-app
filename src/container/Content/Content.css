@@ -4,11 +4,6 @@
     box-sizing: border-box;
     display: flex;
     flex-direction: row;
-    border-top: 2px solid rgba(187, 152, 152, 0.575);
-}
-
-.Content h2{
-    margin: 10px 20px 10px;
 }
 
 .Content .cardContent {
@@ -33,5 +28,9 @@
         width: 100%;
         border-left: none;
     }
+}
+
+@media (max-width: 768px) {
+    
 }
 

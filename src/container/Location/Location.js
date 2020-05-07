@@ -22,7 +22,9 @@ const Location = (props) => {
     return (
         <div className="location">
             <h2>Our Locations</h2>
-            {boxData}
+            <div className="city">
+                {boxData}
+            </div>
         </div>
     )
 }
