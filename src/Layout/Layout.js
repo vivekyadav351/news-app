@@ -8,12 +8,13 @@ import About from '../component/About/About'
 import Home from '../container/Home/Home'
 import Articles from '../component/Articles/Articles'
 import SideDrawer from '../container/NavBar/SideDrawer/SideDrawer';
+import Footer from '../component/Footer/Footer'
 import './Layout.css'
 
 
 class Layout extends Component {
     state = {
-        showSideDrawer: true
+        showSideDrawer: false
     }
 
     sideDrawerHandler = () => {
@@ -41,6 +42,7 @@ class Layout extends Component {
                     <Route path="/" exact component={Home} />
                    <Home />
                 </Switch>
+                <Footer />
             </div>
         )
     }
