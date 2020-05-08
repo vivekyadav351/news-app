@@ -12,7 +12,7 @@
     font-weight: 500;
     margin: 0;
     cursor: pointer;
-    padding-bottom: 10px;
+    padding: 10px 0 5px 5px;
     border-bottom: 1px solid rgba(168, 131, 131, 0.479);
 }
 
@@ -25,7 +25,7 @@
 }
 
 .Sidebar h3 {
-    padding: 0px 0px 5px 0px;
+    padding: 0px 0px 10px 5px;
     border-bottom: 4px solid blueviolet;
     margin: 0px 0px 10px 0px;
 }

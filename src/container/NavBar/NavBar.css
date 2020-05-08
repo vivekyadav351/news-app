@@ -4,7 +4,7 @@
     position: fixed;
     top: 0;
     left: 0;
-    background-color: rgb(224, 213, 203);
+    background-color: black;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -18,15 +18,23 @@
 }
 
 .Navbar a {
-    color: rgb(112, 43, 43);
+    color: white;
     font-size: 24px;
     cursor: pointer;
     font-weight: bold;
     text-decoration: none;
 }
 
-.Navbar a:hover {
-    color: rgb(72, 109, 209);
-}
+@media (max-width: 499px) {
+    .desktopOnly {
+        display: none;
+    }
 
+    .Navbar a {
+        position: relative;
+        font-size: 28px;
+        right: 20px;
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    }
+}
 
