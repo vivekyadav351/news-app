@@ -1,6 +1,8 @@
-import React, { Component } from 'react'
-import axios from 'axios'
-import { AiOutlineUser, AiOutlineClockCircle } from "react-icons/ai"
+import React, { Component } from 'react';
+import {Link} from 'react-router-dom'
+import axios from 'axios';
+import { AiOutlineUser, AiOutlineClockCircle } from "react-icons/ai";
+import { TiSocialFacebook, TiSocialLinkedin, TiSocialGooglePlus, TiSocialInstagram } from "react-icons/ti";
 
 import './Articles.css'
 import Content from '../../container/Content/Content'
@@ -13,7 +15,6 @@ class Articles extends Component {
 
     componentDidMount () {
         console.log(this.props);
-           
         if (this.props.match.params.id) {
             if (!this.state.loadedPost || (this.state.loadedPost && this.state.loadedPost.id !== this.props.id)) {
                 axios.get('/posts/' + this.props.match.params.id)
@@ -38,6 +39,7 @@ class Articles extends Component {
                         <p><AiOutlineClockCircle />  Date</p>
                     </div>
                     <p>{this.state.loadedPost.body}</p>
+                    <p><b>Tags:</b> sint, nihil, reprehenderit, dolor, beatae, ea, dolores</p>
                 </div>
             );
         }
@@ -46,6 +48,15 @@ class Articles extends Component {
                 <Content>
                     {post}
                 </Content>
+                <div className="share">
+                    <h3>Please share this</h3>
+                    <div className="socialIcon">
+                        <Link to="/#"><TiSocialFacebook /></Link>
+                        <Link to="/#"><TiSocialLinkedin /></Link>
+                        <Link to="/#"><TiSocialGooglePlus /></Link>
+                        <Link to="/#"><TiSocialInstagram /></Link>
+                    </div>
+                </div>
             </div>
             
         );

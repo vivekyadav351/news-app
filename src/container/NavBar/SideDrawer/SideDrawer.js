@@ -2,7 +2,8 @@ import React from 'react'
 import StyledSideDrawer from './styled.sideDrawer'
 import Backdrop from './Backdrop/Backdrop'
 
-import NavItems from '../NavItems/NavItems'
+import NavItems from '../NavItems/NavItems';
+
 
 const SideDrawer = (props) => {
     return (
@@ -13,7 +14,7 @@ const SideDrawer = (props) => {
             <StyledSideDrawer show={props.open}>
                 <h2>Co-Working Universe</h2>
                 <nav>
-                    <NavItems />
+                    <NavItems clicked={props.close} />
                 </nav>
             </StyledSideDrawer>
         </div>

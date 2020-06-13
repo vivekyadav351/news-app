@@ -19,7 +19,8 @@ class Posts extends Component {
                 const updatedPosts = posts.map(post => {
                     return {
                         ...post,
-                        image: require('../../assets/images/a2.png')
+                        image: require('../../assets/images/a2.png'),
+                        tags: 'sint, nihil, reprehenderit, dolor, beatae, ea, dolores'
                     }
                 });
                 this.setState({posts: updatedPosts});

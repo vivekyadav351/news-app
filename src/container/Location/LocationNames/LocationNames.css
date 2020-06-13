@@ -1,14 +1,17 @@
 .cityBox {
     width: 246px;
-    height: 91px;
+    height: auto;
     border: 1px solid rgba(160, 122, 122, 0.322);
     color: black;
     box-sizing: border-box;
     background-color: white;
     border-radius: 5px;
-    float: left;
+    display: flex;
+    flex-direction: row;
     cursor: pointer;
+    padding-right: 10px;
     margin: 10px 30px;
+    vertical-align: middle;
 }
 
 .cityBox:hover {
@@ -19,23 +22,18 @@
 .cityBox img {
     width: 110px;
     height: 90px;
-    float:  left;
+    margin-right: 10px;
 }
 
 .cityBox h4 {
     position: relative;
     top: 16px;
-    left: 22px;
 }
 
  @media (max-width: 480px) {
-    .cityBox {
-        width: 300px;
-    }
 
     .cityBox h4 {
         top: 10px;
-        left: 40px;
         font-size: 19px;
     }
 }
