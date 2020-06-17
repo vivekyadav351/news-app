@@ -1,9 +1,12 @@
 import React from 'react'
-import {NavLink} from 'react-router-dom'
+import {NavLink} from 'react-router-dom';
+
 
 import './NavBar.css'
-import NavItems from './NavItems/NavItems';
+import NavItems from './NavItems';
 import { GiHamburgerMenu } from "react-icons/gi";
+import Search from '../../component/Search/index';
+import Account from '../../component/Account/index';
 
 const NavBar = (props) => {
     return (
@@ -14,10 +17,15 @@ const NavBar = (props) => {
                     size="30px"
                     onClick={props.drawerToggleClick} />
             </div>
-            <NavLink to="/" exact>Co-Working Universe</NavLink>
+            <h4><NavLink to="/" exact>Co-Working Universe</NavLink></h4>
             <nav className="desktopOnly">
                 <NavItems />
             </nav>
+            <nav className="desktopOnly">
+                <Search /> 
+                <Account />
+            </nav>
+            
         </header>
     )
 }

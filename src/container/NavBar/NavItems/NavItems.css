@@ -1,55 +1,49 @@
 .NavItems {
-    margin: 0;
-    padding: 0;
-    list-style: none;
+    font-family: inherit;
     display: flex;
-    flex-flow: column;
+    flex-flow: row;
     align-items: center;
-    font-weight: bold;
-    height: 100%;
-    vertical-align: middle;
 }
 
-@media (min-width: 500px) {
+
+.NavItems a {
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+
+/* .Navbar {
+    height: 12vh;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: black;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+    box-sizing: border-box;
+    z-index: 90;
+}
+
+.Navbar nav {
+    height: 100%;
+}
+
+.Navbar a {
+    color: white;
+    font-size: 24px;
+    cursor: pointer;
+    font-weight: bold;
+    text-decoration: none;
+} */
+
+@media (max-width: 500px) {
     .NavItems {
-       flex-flow: row;
-    }
-
-    .NavItems .user .userIcon {
-        position: relative;
-        top: -2px;
-        font-size: 30px;
-    }
-
-    .NavItems .user {
-        position: relative;
-        display: inline-block;
-    }
-
-    .NavItems .user .dropdown {
-        display: none;
-        position: absolute;
-        top: 70px;
-        right: -25px;
-        background-color: #f9f9f9;
-        min-width: 130px;
-        box-shadow: 0px 8px 16px 0px rgba(85, 41, 41, 0.2);
-        z-index: 1;
-    }
-
-    .NavItems .user:hover .dropdown {
-        display: block;
-    }
-
-    .dropdown p {
-        padding: 10px;
-        cursor: pointer;
-        margin: 0;
-    }
-
-    .dropdown p:hover {
-        background-color: rgb(58, 24, 24);
-        color: white;
+       flex-flow: column;
     }
 
 }

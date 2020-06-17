@@ -1,11 +1,11 @@
-.Sidebar {
-    margin: 10px;
+.sidebar {
+    margin: 10px 0;
     font-family: inherit;
     padding: 0 10px;
     box-sizing: border-box;
 }
 
-.Sidebar h4 {
+.sidebar h4 {
     color: black;
     font-family: inherit;
     font-size: 16px;
@@ -16,22 +16,22 @@
     border-bottom: 1px solid rgba(168, 131, 131, 0.479);
 }
 
-.Sidebar a {
+.sidebar a {
     text-decoration: none;
 }
 
-.Sidebar h4:hover {
+.sidebar h4:hover {
     color: #13aff0;
 }
 
-.Sidebar h3 {
+.sidebar h3 {
     padding: 0px 0px 10px 5px;
     border-bottom: 4px solid blueviolet;
     margin: 0px 0px 10px 0px;
 }
 
 @media (max-width: 480px) {
-    .Sidebar h4 {
+    .sidebar h4 {
         font-size: 17px;
         padding-top: 10px;
     }

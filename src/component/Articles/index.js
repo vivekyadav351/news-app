@@ -1,11 +1,11 @@
 import React, { Component } from 'react';
-import {Link} from 'react-router-dom'
+//import {Link} from 'react-router-dom'
 import axios from 'axios';
 import { AiOutlineUser, AiOutlineClockCircle } from "react-icons/ai";
-import { TiSocialFacebook, TiSocialLinkedin, TiSocialGooglePlus, TiSocialInstagram } from "react-icons/ti";
-
+import Social from '../SocialSharing';
+import RelatedArticles from '../RelatedArticles';
 import './Articles.css'
-import Content from '../../container/Content/Content'
+import Content from '../../container/Content';
 import A2 from '../../assets/images/a2.png'
 
 class Articles extends Component {
@@ -24,6 +24,7 @@ class Articles extends Component {
             }
         }
     }
+    
     render() {
         let post = <p>Select Post</p>
         if (this.props.id) {
@@ -40,6 +41,8 @@ class Articles extends Component {
                     </div>
                     <p>{this.state.loadedPost.body}</p>
                     <p><b>Tags:</b> sint, nihil, reprehenderit, dolor, beatae, ea, dolores</p>
+                    <Social />
+                    <RelatedArticles />
                 </div>
             );
         }
@@ -48,15 +51,7 @@ class Articles extends Component {
                 <Content>
                     {post}
                 </Content>
-                <div className="share">
-                    <h3>Please share this</h3>
-                    <div className="socialIcon">
-                        <Link to="/#"><TiSocialFacebook /></Link>
-                        <Link to="/#"><TiSocialLinkedin /></Link>
-                        <Link to="/#"><TiSocialGooglePlus /></Link>
-                        <Link to="/#"><TiSocialInstagram /></Link>
-                    </div>
-                </div>
+                
             </div>
             
         );

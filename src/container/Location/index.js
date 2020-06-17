@@ -1,6 +1,6 @@
 import React from 'react'
 //import Bang from '../../assets/images/bang.jpeg'
-import LocationNames from './LocationNames/LocationNames'
+import LocationNames from './LocationNames'
 import './Location.css'
 
 const cityData = [
@@ -8,6 +8,7 @@ const cityData = [
     {name: 'Delhi/NCR', image: require('../../assets/images/del.jpg')},
     {name: 'Mumbai', image: require('../../assets/images/mum.jpg')},
     {name: 'Hyderabad', image: require('../../assets/images/hyd.jpg')},
+    {name: 'Chennai', image: require('../../assets/images/chen.png')}
 ];
 
 const Location = (props) => {

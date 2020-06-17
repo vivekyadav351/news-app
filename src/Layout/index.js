@@ -1,8 +1,8 @@
 import React, { Component } from 'react'
 
-import Navbar from '../container/NavBar/NavBar'
-import SideDrawer from '../container/NavBar/SideDrawer/SideDrawer';
-import Footer from '../component/Footer/Footer'
+import Navbar from '../container/NavBar'
+import SideDrawer from '../container/NavBar/SideDrawer';
+import Footer from '../component/Footer'
 import './Layout.css'
 
 

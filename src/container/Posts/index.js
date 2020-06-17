@@ -3,7 +3,7 @@ import axios from 'axios'
 import {Link} from 'react-router-dom'
 import './Posts.css'
 
-import Cards from '../../component/Cards/Cards'
+import Cards from '../../component/Cards'
 //import Articles from '../../component/Articles/Articles'
 
 class Posts extends Component {
@@ -38,7 +38,7 @@ class Posts extends Component {
     render() {
         const posts = this.state.posts.map(post => {
             return (
-                <Link to={"/" + post.id} key={post.id}>
+                <Link to={"/news/" + post.id} key={post.id}>
                     <Cards
                         title={post.title}
                         desc={post.body}

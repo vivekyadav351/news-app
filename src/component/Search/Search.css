@@ -1,3 +1,36 @@
 .search {
+    margin: 0 20px;
+    align-items: center;
     cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    box-sizing: border-box;
+}
+
+.search form {
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    box-sizing: border-box;
+}
+
+.searchInput {
+    border: 0;
+    width: 0;
+    background-color: black;
+    margin-right: 15px;
+    transition: width 0.5s ease;
+}
+
+.open {
+    background-color: rgb(68, 62, 53);
+    width: 200px;
+    color: white;
+    padding: 10px;
+    font-size: 16px;
+    align-items: center;
+}
+
+.searchInput:focus {
+    outline: 0;
 }

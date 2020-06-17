@@ -14,5 +14,5 @@ class Cards extends Component {
     }
 }
 
-//export default withRouter(Cards);
+
 export default Cards;

@@ -27,12 +27,12 @@ class SideBar extends Component {
                 )
                         
         });
-         return (
-            <div className="Sidebar">
-            <h3>Recent News</h3>
-                {title}
-            </div>
-         )
+        return (
+        <div className="sidebar">
+        <h3>Recent News</h3>
+            {title}
+        </div>
+        )
     }
 }
 

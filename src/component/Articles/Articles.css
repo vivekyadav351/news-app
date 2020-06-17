@@ -1,7 +1,7 @@
-
 .articles {
     padding: 10px;
     font-family: inherit;
+    margin: 10px;
 }
 
 .articles h1 {
@@ -31,31 +31,6 @@
     line-height: 26px;
 }
 
-.articlePage .share {
-    display: flex;
-    flex-direction: row;
-    border-top: 1px solid black;
-    border-bottom: 1px solid black;
-    margin: 10px 30px;
-    padding: 10px;
-}
-
-.articlePage .share .socialIcon {
-    font-size: 40px;
-    color: white;
-    position: relative;
-    right: -800px;
-}
-
-.articlePage .share .socialIcon a {
-    color: white;
-    margin: 0 10px;
-    border: 1px solid black;
-    border-radius: 100%;
-    padding: 3px;
-    background-color: black;
-    position: relative;
-}
 
 @media (max-width: 480px) {
     .articles img {
