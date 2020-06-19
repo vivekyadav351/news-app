@@ -1,7 +1,9 @@
-import React from 'react'
-//import Bang from '../../assets/images/bang.jpeg'
-import LocationNames from './LocationNames'
-import './Location.css'
+import React, {useState, useEffect} from 'react';
+import {Link} from 'react-router-dom';
+
+import LocationStyle from './Location.styled';
+import cityName from '../../data/blog.json';
+
 
 const cityData = [
     {name: 'Bengaluru', image: require('../../assets/images/bang.jpeg')},
@@ -13,20 +15,40 @@ const cityData = [
 
 const Location = (props) => {
 
+    // const [city, setCity] = useState([]);
+
+    // useEffect(() => {
+    //     const city = cityName.locationData;
+    //     setCity(city);
+    //     console.log(city);
+        
+    // }, [city]);
+
+    // const location = city.map(post => {
+    //     return (
+    //         <Link to={`/location/${post.id}`} key={post.id}>
+    //             <div className="cityBox">
+    //                 <img src={require(`../../assets/images/${post.blogImage}`)} alt="Cities" />
+    //                 <h4>{post.name}</h4>
+    //             </div>
+    //         </Link>
+    //     )
+    // })
+
     const boxData = cityData.map((city, i) => (
-        <LocationNames
-                key={i}
-                city={city.name}
-                image={city.image}  />
+        <div className="cityBox" key={i}>
+            <img src={city.image} alt="Cities" />
+            <h4>{city.name}</h4>
+        </div>
     ));
 
     return (
-        <div className="location">
+        <LocationStyle>
             <h2>Our Locations</h2>
             <div className="city">
                 {boxData}
             </div>
-        </div>
+        </LocationStyle>
     )
 }
 

@@ -1,60 +1,38 @@
-import React, { Component } from 'react'
-import axios from 'axios'
-import {Link} from 'react-router-dom'
-import './Posts.css'
+import React, {useState, useEffect} from 'react';
+import {Link} from 'react-router-dom';
 
-import Cards from '../../component/Cards'
-//import Articles from '../../component/Articles/Articles'
+import PostsStyle from './Posts.styled'
+import BlogPost from '../../data/blog.json';
 
-class Posts extends Component {
-    state = {
-        posts: []
+const Posts = (props) => {
+
+    const [posts, setPosts] = useState([]);
+
+    useEffect(() => {
+        const posts = BlogPost.data;
+        setPosts(posts);
+    }, [posts]);
+
+    if (posts.blogImage === '') {
+        return null;
     }
 
-    componentDidMount() {
-          console.log(this.props);
-        axios.get('/posts')
-            .then(response => {
-                const posts = response.data.slice(0, 10);
-                const updatedPosts = posts.map(post => {
-                    return {
-                        ...post,
-                        image: require('../../assets/images/a2.png'),
-                        tags: 'sint, nihil, reprehenderit, dolor, beatae, ea, dolores'
-                    }
-                });
-                this.setState({posts: updatedPosts});
-                //console.log(response);
-            })
-            .catch(error => {
-                console.log(error);
-            })
-    }
-
-    postClickHandler = (id) => {
-        this.setState({selectedPostId: id});
-    }
-
-    render() {
-        const posts = this.state.posts.map(post => {
-            return (
-                <Link to={"/news/" + post.id} key={post.id}>
-                    <Cards
-                        title={post.title}
-                        desc={post.body}
-                        image={post.image}
-                        {...this.props}
-                        clicked={() => this.postClickHandler(post.id)} />
-                </Link>
-            )
-        });
+    const postss = posts.map(post => {
         return (
-            <div className="Posts">
-                <h2>Funding News</h2>
-                {posts}
-            </div>
+            <Link to={`/startup-news/${post.id}`} key={post.id}>
+                <div className="Cards">
+                    <img src={require(`../../assets/images/${post.blogImage}`)} alt="A1" />
+                    <h1>{post.blogTitle}</h1>
+                </div>
+            </Link>
         )
-    }
+    })
+
+    return (
+        <PostsStyle>
+            {postss}
+        </PostsStyle>
+    )
 }
 
 export default Posts

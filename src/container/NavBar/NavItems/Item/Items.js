@@ -1,11 +1,11 @@
 import React from 'react'
 
-import './Items.css'
+import ItemStyle from './Item.styled';
 
 const Items = (props) => (
-    <li className="Items">
+    <ItemStyle>
         {props.children}
-    </li>
+    </ItemStyle>
 );
 
 export default Items

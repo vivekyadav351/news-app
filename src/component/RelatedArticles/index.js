@@ -1,13 +1,16 @@
 import React from 'react';
-//import Cards from '../Cards';
+
+import SearchStyle from './RelatedPost.styled';
+
 
 const RelatedArticles = (props) => {
     return (
-        <div className="related">
+        <SearchStyle>
             <img src={props.image} alt="A1" />
             <h1>{props.title}</h1>
-        </div>
+            <p>{props.desc}</p>
+        </SearchStyle>
     )
 }
 
-export default RelatedArticles
+export default RelatedArticles;

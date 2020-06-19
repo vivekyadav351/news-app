@@ -1,9 +1,9 @@
-import React, { Component } from 'react'
+import React, { Component } from 'react';
 
-import Navbar from '../container/NavBar'
+import Navbar from '../container/NavBar';
 import SideDrawer from '../container/NavBar/SideDrawer';
-import Footer from '../component/Footer'
-import './Layout.css'
+import Footer from '../component/Footer';
+import {LayoutStyle, MainStyle} from './Layout.styled';
 
 
 class Layout extends Component {
@@ -23,16 +23,16 @@ class Layout extends Component {
 
     render() {
         return (
-            <div className="Layout">
+            <LayoutStyle>
                 <Navbar drawerToggleClick={this.sideDrawerToggleHandler} />
                 <SideDrawer
                     open={this.state.showSideDrawer}
                     close={this.sideDrawerHandler} />
-                <main className="main">
+                <MainStyle>
                     {this.props.children}
-                </main>
+                </MainStyle>
                 <Footer />
-            </div>
+            </LayoutStyle>
         )
     }
 }

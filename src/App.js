@@ -1,11 +1,12 @@
 import React, { Component } from 'react'
 import {Route, Switch} from 'react-router-dom'
 import Layout from './Layout';
-import Startup from './component/Startup'
-import Cowork from './component/CoWork'
+import Startup from './component/Startup';
+import Contact from './component/Contact/index'
 import About from './component/About/index';
 import Home from './container/Home'
-import Articles from './component/Articles'
+import FullArticlePage from './component/FullArticlePage/index'
+import RegistrationForm from './component/Registration/index'
 
 export class App extends Component {
   render() {
@@ -13,10 +14,11 @@ export class App extends Component {
       <div className="App">
           <Layout>
             <Switch>
-              <Route path="/startup" exact component={Startup} />
-              <Route path="/cowork" exact component={Cowork} />
-              <Route path="/about" exact component={About} />
-              <Route path="/news/:id" exact component={Articles} />
+              <Route path="/startup-news" exact component={Startup} />
+              <Route path="/contact-us" exact component={Contact} />
+              <Route path="/about-us" exact component={About} />
+              <Route path="/startup-news/:postId" exact component={FullArticlePage} />
+              <Route path="/registration" exact component={RegistrationForm} />
               <Route path="/" exact component={Home} />
               <Home />
             </Switch>

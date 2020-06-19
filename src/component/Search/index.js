@@ -1,8 +1,8 @@
-import React, {useState} from 'react'
-import './Search.css'
+import React, {useState} from 'react';
+import SearchStyle from './Search.Styled';
 import { FiSearch } from "react-icons/fi";
 
-const Search = () => {
+const Search = (props) => {
 
     const [search, setSearch] = useState(false);
 
@@ -13,23 +13,23 @@ const Search = () => {
 
     const openSearch = () => {
         search ? setSearch(false) : setSearch(true);
-        console.log(search);
     }
 
-    const searchClass = search ? 'searchInput open' : 'searchInput';
-
     return (
-        <div className="search">
+        <SearchStyle search={search} >
             <form onSubmit={onSubmitSearch}>
-                <input type="text"
+                <input
+                    type="text"
                     placeholder="Search"
-                    className={searchClass} />
+                    className="searchInput" />
             </form>
-            <FiSearch
-                    color="white"
-                    size="18px"
-                    onClick={openSearch} />
-        </div>
+            <div className="searchIcon">
+                <FiSearch
+                        color="white"
+                        size="18px"
+                        onClick={openSearch} />
+            </div>
+        </SearchStyle>
     )
 }
 

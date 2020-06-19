@@ -1,18 +1,32 @@
 import React from 'react'
-import './Home.css'
+
+import Styled from 'styled-components';
 import Content from '../Content'
 import Location from '../Location'
-import Posts from '../Posts'
+import Posts from '../Posts/index';
+
+const HomeStyle = Styled.div `
+
+    display: flex;
+    flex-direction: column;
+
+    h2 {
+    margin: 10px;
+    padding: 0;
+}
+
+`;
 
 
-const Home = () => {
+const Home = (props) => {
     return (
-        <div className="home">
+        <HomeStyle onClick={props.clicked}>
             <Location />
             <Content>
+                <h2>Funding News</h2>
                 <Posts />
             </Content>
-        </div>
+        </HomeStyle>
     )
 }
 

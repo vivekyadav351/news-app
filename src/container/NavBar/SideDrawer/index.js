@@ -1,5 +1,8 @@
-import React from 'react'
-import StyledSideDrawer from './styled.sideDrawer'
+import React from 'react';
+import { Link } from 'react-router-dom';
+import { AiFillHome } from "react-icons/ai";
+
+import SideDrawerStyle from './styled.sideDrawer'
 import Backdrop from './Backdrop'
 import NavItems from '../NavItems';
 import Search from '../../../component/Search/index';
@@ -12,16 +15,15 @@ const SideDrawer = (props) => {
             <Backdrop
                 show={props.open}
                 clicked={props.close} />
-            <StyledSideDrawer show={props.open}>
-                <h2>Co-Working Universe</h2>
-                <nav>
-                    <NavItems clicked={props.close} />
-                </nav>
-                <nav>
-                    <Search/>
-                    <Account clicked={props.close} />
-                </nav>
-            </StyledSideDrawer>
+            <SideDrawerStyle show={props.open}>
+                <Link to="/" onClick={props.close} >
+                    <AiFillHome color="white" size="30px" />
+                    <h2>Home</h2>
+                </Link>
+                <Search/>
+                <Account clicked={props.close} /> 
+                <NavItems clicked={props.close} />
+            </SideDrawerStyle>
         </div>
     )
 }

@@ -1,23 +1,23 @@
 import React from 'react'
 import {NavLink} from 'react-router-dom'
 
-import './NavItems.css'
+import NavItemsStyle from './NavItems.styled';
 import Items from './Item/Items';
 
 const NavItems = (props) => (
-    <ul className="NavItems" onClick={props.clicked}>
+    <NavItemsStyle onClick={props.clicked}>
         <Items>
-            <NavLink to="/startup" exact>Start-up News</NavLink>
+            <NavLink to="/startup-news" exact>Start-up News</NavLink>
         </Items>
-        <Items>|</Items>
+        <div className="line">|</div>
         <Items>
-            <NavLink to="/cowork">Co-working News</NavLink>
+            <NavLink to="/about-us">About Us</NavLink>
         </Items>
-        <Items>|</Items>
+        <div className="line">|</div>
         <Items>
-            <NavLink to="/about">About Us</NavLink>
+            <NavLink to="/contact-us">Contact Us</NavLink>
         </Items>
-    </ul>
+    </NavItemsStyle>
 );
 
 export default NavItems

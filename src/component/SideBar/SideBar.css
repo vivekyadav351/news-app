@@ -3,13 +3,14 @@
     font-family: inherit;
     padding: 0 10px;
     box-sizing: border-box;
+    font-family: inherit;
 }
 
 .sidebar h4 {
     color: black;
-    font-family: inherit;
-    font-size: 16px;
-    font-weight: 500;
+    
+    font-size: 14px;
+    font-weight: 600;
     margin: 0;
     cursor: pointer;
     padding: 10px 0 5px 5px;
@@ -25,9 +26,14 @@
 }
 
 .sidebar h3 {
-    padding: 0px 0px 10px 5px;
+    padding-bottom: 10px;
     border-bottom: 4px solid blueviolet;
-    margin: 0px 0px 10px 0px;
+    margin: 0;
+}
+
+.sidebar hr {
+    color: saddlebrown;
+    border: 2px solid blueviolet;
 }
 
 @media (max-width: 480px) {

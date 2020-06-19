@@ -1,39 +1,32 @@
-import React, {Component} from 'react'
-import axios from 'axios'
-import {Link} from 'react-router-dom'
-
-import Title from './Title/Title'
+import React, {useState, useEffect} from 'react'
+import {NavLink} from 'react-router-dom'
 import './SideBar.css'
+import BlogPost from '../../data/blog.json'
 
-class SideBar extends Component {
-    state = {
-        posts: []
-    }
-    componentDidMount() {
-        axios.get('/posts')
-            .then(response => {
-                const posts = response.data;
-                this.setState({posts: posts});
-            })
-    }
-    render() {
-        const title = this.state.posts.slice(0, 5).map(post => {
-            return (
-                <Link to={"/" + post.id} key={post.id}>
-                    <Title
-                        title={post.title}
-                        clicked={() => this.postClickHandler(post.id)} />
-                </Link>
-                )
-                        
-        });
+const Sidebar = (props) => {
+
+    const [titles, setTitles] = useState([]);
+    
+
+    useEffect(() => {
+        const titles = BlogPost.data;
+        setTitles(titles);
+    }, [titles]);
+
+    const title = titles.slice(0, 5).map(post => {
         return (
+            <NavLink to={`/startup-news/${post.id}`} key={post.id}>
+                <h4>{post.blogTitle}</h4>
+            </NavLink>
+        )
+    })
+
+    return (
         <div className="sidebar">
-        <h3>Recent News</h3>
+            <h3>Recent News</h3>
             {title}
         </div>
-        )
-    }
+    )
 }
 
-export default SideBar
+export default Sidebar
