@@ -4,7 +4,7 @@ import RegistrationStyle from './Registration.styled';
 
 const Registration = () => {
     return (
-        <div className="registration">
+        <RegistrationStyle>
             <h3>Register</h3>
             <form>
                 <input type="name" placeholder="First Name"/>
@@ -17,7 +17,7 @@ const Registration = () => {
                     <button>Login</button>
                 </div>
             </form>
-        </div>
+        </RegistrationStyle>
     )
 }
 
