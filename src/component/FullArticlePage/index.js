@@ -3,7 +3,7 @@ import {Link} from 'react-router-dom';
 import { AiOutlineUser, AiOutlineClockCircle } from "react-icons/ai";
 import Social from '../SocialSharing';
 import RelatedArticles from '../RelatedArticles';
-import Article from '../Article/Article'
+import Article from '../Article/index';
 import Content from '../../container/Content';
 import BlogPost from '../../data/blog.json'
 import NextPrev from '../NextPrev/index'
@@ -71,7 +71,6 @@ const FullArticlePage = (props) => {
                 <NextPrev />
                 {relatedPosts}
                 <CommentBox />
-
             </Content>
     )
 }

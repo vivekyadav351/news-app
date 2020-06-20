@@ -1,9 +1,10 @@
 import React from 'react'
-import './CoWork.css'
+
+import ContactStyle from './Contact.styled'
 
 const Contact = () => {
     return (
-        <div className="contact">
+        <ContactStyle>
             <h1>Contact Us</h1>
             <p>We love to hear from you. Use the directory below to contact us.</p>
             <div className="section">
@@ -22,7 +23,7 @@ const Contact = () => {
                 <h2>Address</h2>
                 <p>6th Main, 21st Sector, 5th Avenue, HSR Layout, Bengaluru, Karnataka India.</p>
             </div>
-        </div>
+        </ContactStyle>
     )
 }
 

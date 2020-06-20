@@ -1,6 +1,7 @@
-import React, {useState, useEffect} from 'react'
-import {NavLink} from 'react-router-dom'
-import './SideBar.css'
+import React, {useState, useEffect} from 'react';
+import {NavLink} from 'react-router-dom';
+
+import SidebarStyle from './Sidebar.styled';
 import BlogPost from '../../data/blog.json'
 
 const Sidebar = (props) => {
@@ -22,10 +23,10 @@ const Sidebar = (props) => {
     })
 
     return (
-        <div className="sidebar">
+        <SidebarStyle>
             <h3>Recent News</h3>
             {title}
-        </div>
+        </SidebarStyle>
     )
 }
 

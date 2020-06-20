@@ -1,12 +1,12 @@
 import React from 'react';
-import './UsersComment.css';
+import UserCommentStyle from './UserComment.styled'
 
 const UsersComment = (props) => {
     return (
-        <div className="usersComment">
+        <UserCommentStyle>
             <h3>{props.userName}</h3>
             <p>{props.comment}</p>
-        </div>
+        </UserCommentStyle>
     )
 }
 

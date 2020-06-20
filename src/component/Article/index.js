@@ -1,11 +1,11 @@
 import React, {useState, useEffect} from 'react'
 import { AiOutlineUser, AiOutlineClockCircle } from "react-icons/ai";
-import './Article.css';
+import ArticleStyle from './Article.styled';
 
 const Article = (props) => {
 
     return (
-        <div className="articles">
+        <ArticleStyle>
             <h1>{props.title}</h1>
             <img src={props.image} alt="A1"  />
             <div className="AuthDate">
@@ -17,7 +17,7 @@ const Article = (props) => {
             </div>
             <p>{props.desc}</p>
             <p><b>Tags:</b>{props.tag}</p>
-        </div>
+        </ArticleStyle>
     )
 }
 

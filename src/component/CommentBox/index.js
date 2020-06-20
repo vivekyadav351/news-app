@@ -1,6 +1,6 @@
 import React, {useState, UseEffect} from 'react';
 import axios from 'axios'
-import './CommentBox.css'
+import CommentBoxStyle from './CommentBox.styled'
 import UsersComment from '../UsersComment/index'
 
 const CommentBox = () => {
@@ -26,7 +26,7 @@ const CommentBox = () => {
     }
 
     return (
-        <div className="commentBox">
+        <CommentBoxStyle>
             <h4>Leave a comment here</h4>
             <form>
                 <div>
@@ -53,7 +53,7 @@ const CommentBox = () => {
                     comment={data.comment} />
                 ))
             }
-        </div>
+        </CommentBoxStyle>
     )
 }
 

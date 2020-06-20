@@ -1,5 +1,5 @@
 import React from 'react'
-import './About.css'
+import AboutStyle from './About.styled';
 import B3 from '../../assets/images/b3.jpg';
 import B4 from '../../assets/images/b4.jpg';
 import B5 from '../../assets/images/b5.jpg';
@@ -7,7 +7,7 @@ import B6 from '../../assets/images/b6.jpg';
 
 const About = () => {
     return (
-        <div className="about">
+        <AboutStyle>
             <h1>About Us</h1>
             <div className="section">
                 <p>We provide platform for “Co-Working Space” Company to promote their brand and write blog related to their business. We also provide contact details of people looking for co-working space. We also give platform for small brand to compete with big brands.</p>
@@ -26,7 +26,7 @@ const About = () => {
                 <img src={B5} alt='B5' />
             </div>
             
-        </div>
+        </AboutStyle>
     )
 }
 
