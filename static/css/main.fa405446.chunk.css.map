@@ -1,0 +1,1 @@
+{"version":3,"sources":["index.css"],"names":[],"mappings":"AAAA,KACE,kCAAoC,CACpC,QAAS,CACT,SAAU,CACV,WAEF","file":"main.fa405446.chunk.css","sourcesContent":["body {\n  font-family: 'Open Sans', sans-serif;\n  margin: 0;\n  padding: 0;\n  height: 100%;\n  /* font-family: 'Oswald', sans-serif; */\n}\n"]}
